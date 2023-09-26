@@ -1,3 +1,4 @@
+require('./app_api/model/db');
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,6 +7,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
+var routesApi = require('./app_api/routes/index');
 
 var app = express();
 
@@ -20,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api',routesApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
