@@ -7,11 +7,10 @@ module.exports.aboutus = function(req, res){
   };
   module.exports.reservation = function(req, res){
     res.render('reservation', { title: 'reservation' ,reservationData:[{
-      name: 'Jane Smith',
-      email: 'janesmith@example.com',
-      phone: '987-654-3210',
-      date: new Date('2023-09-05'),
-      time: '18:30',
-      guests: 2,
+      fullName: "Jane Smith",
+    email: "janesmith@example.com",
+    studentId: "987654321",
+    scholarshipName: "cappex",
+    essay: "I am applying for the cappex scholarship because I am deeply dedicated to my studies and...",
   }]});
   };

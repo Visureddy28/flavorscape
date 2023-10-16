@@ -1,50 +1,42 @@
 var mongoose = require('mongoose');
 
 var menuItemSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    price: {
-        type: Number,
-        required: true,
-        min: 0
-    },
-    description: String,
-    rating: {
-        type: Number,
-        default: 0,
-        min: 0,
-        max: 5
-    },
-    image: String,
-    
+  name: {
+    type: String,
+    required: true,
+  },
+  eligibility: String,
+  deadline: {
+    type: Date,
+    required: true,
+  },
+  amount: {
+    type: Number,
+    required: true,
+    min: 0,
+  },  
 });
 var reservationSchema = new mongoose.Schema({
-    name: {
-      type: String,
-      required: true,
-    },
-    email: {
-      type: String,
-      required: true,
-    },
-    phone: {
-      type: String,
-      required: true,
-    },
-    date: {
-      type: Date,
-      required: true,
-    },
-    time: {
-      type: String,
-      required: true,
-    },
-    guests: {
-      type: Number,
-      required: true,
-    },
+  fullName: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  studentId: {
+    type: String,
+    required: true,
+  },
+  scholarshipName: {
+    type: String,
+    required: true,
+  },
+  essay: {
+    type: String,
+    required: true,
+  },
   });
 mongoose.model('MenuItem', menuItemSchema);
 mongoose.model('Reservation', reservationSchema);

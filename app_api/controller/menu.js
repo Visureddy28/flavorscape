@@ -11,10 +11,10 @@ var sendJsonResponse = function (res, status, content) {
     const { name, price, description, rating, image } = req.body;
     const newMenuItem = {
       name,
-      price,
-      description,
-      rating,
-      image,
+      eligibility,
+      deadline,
+      amount,
+      
     };
   
     MenuItem.create(newMenuItem)

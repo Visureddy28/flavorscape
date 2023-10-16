@@ -10,12 +10,12 @@ var Reservation = mongoose.model('Reservation');
     console.log(req.body);
     const { name, email, phone, date, time, guests } = req.body;
     const newReservation = {
-      name,
+      fullName,
       email,
-      phone,
-      date,
-      time,
-      guests,
+      studentId,
+      scholarshipName,
+      essay,
+      
     };
   
     Reservation.create(newReservation)

@@ -1,26 +1,32 @@
 extends layout
 
 block content
-  section.reservation
-    h1 Reserve a Table
-    p To make a reservation, please provide the following details. Our team will get back to you to confirm your reservation.
-    form(action="/reserve", method="post")
+  section.application
+    h1 Apply for Scholarships
+    p To apply for scholarships, please provide the following details. 
+
+    form(action="/reservation", method="post")
       div.form-group
-        label(for="name") Name:
-        input#name.form-control(type="text", name="name", required)
+        label(for="full-name") Full Name:
+        input#full-name.form-control(type="text", name="full-name", required)
+      
       div.form-group
         label(for="email") Email:
         input#email.form-control(type="email", name="email", required)
+      
       div.form-group
-        label(for="phone") Phone:
-        input#phone.form-control(type="tel", name="phone", required)
+        label(for="student-id") Student ID:
+        input#student-id.form-control(type="text", name="student-id", required)
+        
       div.form-group
-        label(for="date") Date:
-        input#date.form-control(type="date", name="date", required)
+        label(for="scholarship-name") Scholarship Name:
+        select#scholarship-name.form-control(name="scholarship-name", required)
+          option(value="scholarship1") Fastweb
+          option(value="scholarship2") cappex
+          option(value="scholarship3") chegh scholarships
+
       div.form-group
-        label(for="time") Time:
-        input#time.form-control(type="time", name="time", required)
-      div.form-group
-        label(for="guests") Number of Guests:
-        input#guests.form-control(type="number", name="guests", required)
-      button.btn.btn-primary(type="submit") Reserve Table
+        label(for="essay") Scholarship Essay:
+        textarea#essay.form-control(name="essay", rows="6", required)
+      
+      button.btn.btn-primary(type="submit") Apply

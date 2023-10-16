@@ -1,31 +1,15 @@
 extends layout
 
 block content
-  .row.page-header
-    .col-lg-12
-      h1 veg Menu
+  .container
+    .row
+      .col-md-12
+        section.scholarship-details
+          h1 cappex
+          p Deadline: June 15, 2024
+          p Amount: $3,000
+          p Eligibility: other criteria
+          
+          The cappex Scholarship is a prestigious opportunity designed to support students in their pursuit of higher education. This scholarship offers financial assistance to eligible students who are committed to achieving their academic and career goals. It is a testament to our dedication to helping students overcome financial barriers and reach their full potential.
 
-  .row
-    .col-xs-12.col-md-9
-      .row
-        each menuItem in menuItems
-          .col-xs-12.col-sm-6.menu-item
-            .panel.panel-primary
-              .panel-heading
-                h2.panel-title= menuItem.name
-                span.badge.pull-right.badge-default Rs.#{menuItem.price}
-              .panel-body
-                img.menu-item-image(src=menuItem.image, alt=menuItem.name)
-                p.menu-item-description= menuItem.description
-                p.rating
-                  - var rating = menuItem.rating;
-              each star in [1, 2, 3, 4, 5]
-                if star <= rating
-                  span.glyphicon.glyphicon-star
-                else
-                  span.glyphicon.glyphicon-star-empty
-                  
-    .col-xs-12.col-sm-3
-      p.lead
-        |  Indulge in the artistry of vegetarian flavors at Flavorscape Kitchen, where seasonal produce takes center stage in vibrant dishes crafted with culinary finesse. From hearty classics to innovative creations, our vegetarian cuisine celebrates the essence of plant-based gastronomy.     
-
+        
